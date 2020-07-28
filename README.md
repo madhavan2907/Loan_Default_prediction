@@ -8,7 +8,7 @@ Majority of the space is occupied by the exports of intermittant transformation 
 
 ### Steps to follow:
 1. Create a new folder at a location of your choice
-2. Download below files to folder created in step-1:
+2. Download below files from Model folder to the folder created in step-1:
 	a. EDA_and_Data_Engineering.ipynb
 	b. Modelling.ipynb
 	c. XYZCorp_LendingData.rar
