@@ -1,7 +1,10 @@
 # Loan_Default_prediction
 
-### Space requirements : 2.3 GB
-### Note :  Majority of the space is occupied by the exports of intermittant transformation steps, No worries, These folders will be cleared at the end while executing "Modelling.ipynb" notebook.
+### Space requirements : 
+2.3 GB
+
+### Note :  
+Majority of the space is occupied by the exports of intermittant transformation steps, No worries, These folders will be cleared at the end while executing "Modelling.ipynb" notebook.
 
 1. Create a new folder at a location of your choice
 2. Download below files to folder created in step-1:
