@@ -12,4 +12,4 @@ pandas>=1.0.3
 flasgger==0.9.4
 streamlit
 seaborn>=0.10.0
-xgboost>=0.90
+xgboost
