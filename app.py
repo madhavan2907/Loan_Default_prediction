@@ -9,6 +9,7 @@ import pickle
 import pandas as pd
 import streamlit as st
 import pandas as pd
+# import config
 
 # from xgboost import XGBRFClassifier()
 
@@ -715,8 +716,8 @@ def main():
 
 
     if st.button("Predict"):
-        prediction = hybrid_model.predict([[
-                                loan_amnt, funded_amnt, funded_amnt_inv, term, int_rate, installment, grade, sub_grade, emp_length,
+
+        input = [[loan_amnt, funded_amnt, funded_amnt_inv, term, int_rate, installment, grade, sub_grade, emp_length,
                                 annual_inc, verification_status, dti, delinq_2yrs, inq_last_6mths, pub_rec, revol_bal, out_prncp,
                                 out_prncp_inv, total_pymnt, total_pymnt_inv, total_rec_prncp, total_rec_int, total_rec_late_fee,
                                 recoveries, collection_recovery_fee, last_pymnt_amnt, home_ownership_OTHER,
@@ -742,8 +743,9 @@ def main():
                                 last_credit_pull_d_Q3_2011, last_credit_pull_d_Q3_2012, last_credit_pull_d_Q3_2013, last_credit_pull_d_Q3_2014,
                                 last_credit_pull_d_Q3_2015, last_credit_pull_d_Q4_2007, last_credit_pull_d_Q4_2008, last_credit_pull_d_Q4_2009,
                                 last_credit_pull_d_Q4_2010, last_credit_pull_d_Q4_2011, last_credit_pull_d_Q4_2012, last_credit_pull_d_Q4_2013,
-                                last_credit_pull_d_Q4_2014, last_credit_pull_d_Q4_2015, application_type_JOINT
-                                            ]])
+                                last_credit_pull_d_Q4_2014, last_credit_pull_d_Q4_2015, application_type_JOINT]]
+        prediction = hybrid_model.predict(np.array(input))
+
         if prediction == 0:
             st.warning('Wont default')
         else:
