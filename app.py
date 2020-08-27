@@ -8,7 +8,6 @@ import numpy as np
 import pickle
 import pandas as pd
 import streamlit as st
-import config
 import pandas as pd
 
 from lightgbm import LGBMClassifier
