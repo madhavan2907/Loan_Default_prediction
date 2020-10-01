@@ -745,11 +745,15 @@ def main():
                                 last_credit_pull_d_Q4_2010, last_credit_pull_d_Q4_2011, last_credit_pull_d_Q4_2012, last_credit_pull_d_Q4_2013,
                                 last_credit_pull_d_Q4_2014, last_credit_pull_d_Q4_2015, application_type_JOINT]]
         prediction = hybrid_model.predict(np.array(input))
+        prediction_prob = hybrid_model.predict_proba(np.array(input))
 
         if prediction == 0:
-            st.warning('Wont default')
+            st.warning(f"This customer Wont default and the confidenece for the same is {round((prediction_prob[0][0] * 100),2)}%")
         else:
-            st.warning('Will default')
+            st.warning(f"This customer will default and the confidenece for the same is {round((prediction_prob[0][1] * 100),2)}%")
+        print(prediction_prob)
+        print(prediction_prob[0][0])
+
 
     mylist = [
         loan_amnt, funded_amnt, funded_amnt_inv, term, int_rate, installment, grade, sub_grade, emp_length,
