@@ -1,8 +1,9 @@
 # Loan_Default_prediction
 
-### Note :  
-Exports of intermittant transformation steps, will be cleared at the end while executing "Modelling.ipynb" notebook.
+In this project, I've built a classification model to predict the probability of default value for a customer based on his credit history and deployed the same as a webapp in Heroku.
 
+### Note :  
+Exports of intermittant transformation steps, will be cleared at the end the model execution.
 ### Steps to follow:
 1. Create a new folder at a location of your choice
 2. Download below files from Model folder to the folder created in step-1:  
